@@ -4,25 +4,24 @@ import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'green',
     alignItems: 'center',
-    // borderBottomColor: colors.GRAY,
     borderBottomWidth: 1,
     flexDirection: 'row',
     height: 50,
     justifyContent: 'space-around',
     width: '100%',
   },
+  textContainer: {
+    flex: 4,
+  },
   button: {
+    flex: 1,
     alignItems: 'center',
-    // backgroundColor: 'blue',
     justifyContent: 'center',
   },
   text: {
-    // backgroundColor: 'red',
     fontFamily: 'OpenSans-SemiBoldItalic',
-    // fontSize: 10,
-    textAlign: 'center',
+    textAlign: 'left',
   },
 });
 

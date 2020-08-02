@@ -6,18 +6,19 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
 import colors from '../../styles/colors';
 
-let isNotDone = 'checkbox-blank-outline';
-let isDone = 'checkbox-marked';
+let notDone = 'checkbox-blank-outline';
+let ciDone = 'checkbox-marked';
 let remove = 'delete';
 
-const TodoItem = () => {
+const TodoItem = ({id, desc, done}) => {
+  let isDone = done ? ciDone : notDone;
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button}>
-        <Icon name={isNotDone} size={24} color={colors.BLACK} />
+        <Icon name={isDone} size={24} color={colors.BLACK} />
       </TouchableOpacity>
-      <View>
-        <Text style={styles.text}>Descripcion del todo</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{desc}</Text>
       </View>
       <TouchableOpacity style={styles.button}>
         <Icon name={remove} size={24} color={colors.BLACK} />

@@ -1,8 +1,9 @@
 import React, {useReducer} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, FlatList, VirtualizedList} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import todoReducer from '../../reducers/todoReducer';
 
+import FAB from '../../components/FAB/FAB';
 import TodoItem from '../../components/TodoItem/TodoItem';
 
 import styles from './styles';
@@ -14,7 +15,7 @@ const initialState = [
     done: false,
   },
   {
-    id: new Date().getTime(),
+    id: 1,
     desc: 'Aprender FlexBox',
     done: false,
   },
@@ -27,7 +28,19 @@ const All = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text>All Section</Text>
-        <TodoItem />
+        <FlatList
+          data={todos}
+          renderItem={({item}) => (
+            <TodoItem
+              key={item.id}
+              id={item.id}
+              desc={item.desc}
+              done={item.done}
+            />
+          )}
+          keyExtractor={({id}) => id.toString()}
+        />
+        <FAB />
       </View>
     </SafeAreaView>
   );
