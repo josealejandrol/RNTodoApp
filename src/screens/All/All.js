@@ -27,7 +27,7 @@ const All = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text>All Section</Text>
+        <Text style={styles.titleText}>All Section</Text>
         <FlatList
           data={todos}
           renderItem={({item}) => (

@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    // alignItems: 'center',
-    // backgroundColor: colors.GRAY,
     flex: 1,
-    // justifyContent: 'center',
     paddingHorizontal: 24,
+  },
+  titleText: {
+    fontFamily: 'OpenSans-ExtraBold',
+    fontSize: 24,
+    textAlign: 'center',
   },
 });
 

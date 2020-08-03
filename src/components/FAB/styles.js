@@ -13,6 +13,14 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: 'center',
     width: 60,
+    shadowColor: colors.BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
   },
 });
 
