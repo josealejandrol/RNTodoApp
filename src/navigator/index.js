@@ -19,6 +19,66 @@ import AllScreen from '../screens/All';
 import ActiveScreen from '../screens/Active';
 import CompletedScreen from '../screens/Completed';
 
+const AllStackScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={'All'}
+        component={AllScreen}
+        options={{
+          title: 'All Section',
+          headerStyle: {backgroundColor: colors.BLUE},
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontFamily: 'OpenSans-ExtraBold',
+            fontSize: 24,
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const ActiveStackScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={'Active'}
+        component={ActiveScreen}
+        options={{
+          title: 'Active Section',
+          headerStyle: {backgroundColor: colors.BLUE},
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontFamily: 'OpenSans-ExtraBold',
+            fontSize: 24,
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const CompletedStackScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={'Completed'}
+        component={CompletedScreen}
+        options={{
+          title: 'Completed Section',
+          headerStyle: {backgroundColor: colors.BLUE},
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontFamily: 'OpenSans-ExtraBold',
+            fontSize: 24,
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const AppNavigator = () => {
   return (
     <SafeAreaProvider>
@@ -45,9 +105,9 @@ const AppNavigator = () => {
             activeTintColor: colors.BLUE,
             inactiveTintColor: colors.GRAY,
           }}>
-          <Tab.Screen name={'All'} component={AllScreen} />
-          <Tab.Screen name={'Active'} component={ActiveScreen} />
-          <Tab.Screen name={'Completed'} component={CompletedScreen} />
+          <Tab.Screen name={'All'} component={AllStackScreen} />
+          <Tab.Screen name={'Active'} component={ActiveStackScreen} />
+          <Tab.Screen name={'Completed'} component={CompletedStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
