@@ -10,8 +10,13 @@ const initialState = [
     done: false,
   },
   {
-    id: 1,
+    id: new Date().getTime() + 1,
     desc: 'Aprender FlexBox',
+    done: false,
+  },
+  {
+    id: new Date().getTime() + 2,
+    desc: 'Aprender Javascript',
     done: false,
   },
 ];

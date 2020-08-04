@@ -5,9 +5,11 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
 import colors from '../../styles/colors';
 
-const FAB = () => {
+const FAB = ({navigation}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('EditTodo')}
+      style={styles.container}>
       <Icon name={'plus-thick'} size={24} color={colors.BLACK} />
     </TouchableOpacity>
   );

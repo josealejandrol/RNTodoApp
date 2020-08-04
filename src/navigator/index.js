@@ -13,6 +13,7 @@ const Tab = createBottomTabNavigator();
 
 //screens
 import HomeScreen from '../screens/Home';
+import EditTodo from '../screens/EditTodo';
 
 //tab screens
 import AllScreen from '../screens/All';
@@ -27,6 +28,19 @@ const AllStackScreen = () => {
         component={AllScreen}
         options={{
           title: 'All Section',
+          headerStyle: {backgroundColor: colors.BLUE},
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontFamily: 'OpenSans-ExtraBold',
+            fontSize: 24,
+          },
+        }}
+      />
+      <Stack.Screen
+        name={'EditTodo'}
+        component={EditTodo}
+        options={{
+          title: 'Edit Todo',
           headerStyle: {backgroundColor: colors.BLUE},
           headerTitleAlign: 'center',
           headerTitleStyle: {

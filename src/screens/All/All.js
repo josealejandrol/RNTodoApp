@@ -9,7 +9,7 @@ import TodoItem from '../../components/TodoItem/TodoItem';
 
 import styles from './styles';
 
-const All = () => {
+const All = ({navigation}) => {
   const {todos} = useContext(TodoContext);
 
   // const [todos] = useReducer(todoReducer, initialState);
@@ -40,7 +40,7 @@ const All = () => {
               done={item.done}
             />
           ))}
-        <FAB />
+        <FAB navigation={navigation} />
       </View>
     </SafeAreaView>
   );
