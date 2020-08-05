@@ -2,7 +2,7 @@ import React, {useReducer, useContext} from 'react';
 import {View, Text, FlatList, VirtualizedList} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import todoReducer from '../../reducers/todoReducer';
-import {TodoContext} from '../../context/TodoContext';
+import {useTodos} from '../../context/TodoContext';
 
 import FAB from '../../components/FAB/FAB';
 import TodoItem from '../../components/TodoItem/TodoItem';
@@ -10,8 +10,7 @@ import TodoItem from '../../components/TodoItem/TodoItem';
 import styles from './styles';
 
 const All = ({navigation}) => {
-  const {todos} = useContext(TodoContext);
-
+  const {todos, setTodos} = useTodos();
   // const [todos] = useReducer(todoReducer, initialState);
   console.log(todos);
   return (

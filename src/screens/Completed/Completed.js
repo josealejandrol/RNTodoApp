@@ -1,14 +1,14 @@
 import React, {useContext} from 'react';
 import {View, Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {TodoContext} from '../../context/TodoContext';
+import {useTodos} from '../../context/TodoContext';
 
 import TodoItem from '../../components/TodoItem';
 
 import styles from './styles';
 
 const Completed = () => {
-  const {todos} = useContext(TodoContext);
+  const {todos} = useTodos();
 
   const filtered = todos.filter((item) => item.done === true);
 
